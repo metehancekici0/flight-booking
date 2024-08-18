@@ -1,4 +1,5 @@
-// config/config.js
+require('dotenv').config();
+
 module.exports = {
     api: {
         hostname: 'api.schiphol.nl',

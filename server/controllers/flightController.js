@@ -2,19 +2,7 @@ const axios = require('axios');
 const config = require('../config/config');
 const Flight = require("../models/flight");
 
-const getFormattedCurrentDate = () => {
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    const day = String(currentDate.getDate()).padStart(2, '0');
-    const hours = String(currentDate.getHours()).padStart(2, '0');
-    const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-    const seconds = String(currentDate.getSeconds()).padStart(2, '0');
-    return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
-};
-
 exports.fetchFlights = async (req, res) => {
-    const fromDateTime = getFormattedCurrentDate();
 
     try {
         const response = await axios.get(`https://${config.api.hostname}/public-flights/flights`, {

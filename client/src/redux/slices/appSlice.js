@@ -22,7 +22,7 @@ export const fetchFlights = createAsyncThunk("flights/fetchFlights", async () =>
         // console.log(flights)
         return flights;
     } catch (error) {
-        console.log(error.message);
+        console.log("hata: ", error.message);
     }
 })
 
