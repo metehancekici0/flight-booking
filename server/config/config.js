@@ -2,8 +2,8 @@
 module.exports = {
     api: {
         hostname: 'api.schiphol.nl',
-        appId: '5d199d55',
-        appKey: '8b4397346c9c1dd5088de3e34aa34a76',
+        appId: process.env.APP_ID,
+        appKey: process.env.APP_KEY,
         resourceVersion: 'v4',
     },
     port: process.env.PORT
