@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@layer base {
+
+    html,
+    body,
+    #root {
+        height: 100%;
+        @apply bg-[#E8DDFF]
+    }
+
+    button, input, select {
+        @apply outline-none shadow-none
+    }
+}
+
+@layer utilities {
+    .bg-box {
+        @apply opacity-0 absolute top-0 left-0 w-full h-full bg-black/50 transition duration-300 ease-in-out
+    }
+
+    .bg-content {
+        background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .9));
+        @apply w-full absolute -bottom-7 sm:-bottom-5 left-0 transition-all duration-300 ease-in-out p-4 sm:p-2 group-hover:bottom-0
+    }
+
+    .custom-radio {
+        @apply pointer-events-none
+    }
+
+    .custom-radio:after {
+        width: 15px;
+        max-width: 15px;
+        height: 15px;
+        max-height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #F6F4F8;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #4D0197;
+    }
+
+    .custom-radio:checked:after {
+        width: 15px;
+        max-width: 15px;
+        height: 15px;
+        max-height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #4D0197;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #4D0197;
+    }
+}
+
+.Toastify__toast-body {
+    @apply font-poppins text-sm
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
